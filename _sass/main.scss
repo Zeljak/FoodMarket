@@ -137,9 +137,35 @@ a {
   }
 }
 
+#uvod {
+  margin-top: 130px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @include for-phone {
+    margin-top: 70px;
+  }
+}
 section {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+.rubrika {
+  padding-left: 170px;
+  padding-right: 170px;
+
+  @include for-phone {
+    margin-top: 70px;
+  }
+}
+
+.raspored {
+  display: flex;
+
+  img {
+    width: 25%;
+  }
 }
 
 .wrapper {
@@ -152,9 +178,6 @@ section {
 
   @include for-desktop {
     width: 780px;
-  }
-  @include for-big-desktop {
-    width: 1500px;
   }
 }
 
@@ -185,7 +208,7 @@ section {
     flex: 50%;
   }
   @include for-desktop {
-    flex: 50%;
+    flex: 70%;
   }
   @include for-big-desktop {
     flex: 50%;
@@ -216,10 +239,18 @@ section {
   }
 }
 
-.red-title {
-  background-color: $redish;
-  color: white;
+.black-title,
+.black-title--span {
+  color: black;
   font-family: $family-secondary;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+
+  .black-title--span {
+    font-weight: normal;
+    font-style: normal;
+  }
 
   @include for-phone {
     font-size: 22px;
@@ -247,12 +278,72 @@ section {
     padding-right: 20px;
     padding-left: 20px;
   }
-  @include for-big-desktop {
-    font-size: 50px;
-    line-height: 75px;
-    margin-top: 10px;
+}
+
+.subtitle {
+  color: black;
+  font-family: $family-fifth;
+  font-weight: bold;
+  margin-top: 24px;
+
+  @include for-phone {
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  @include for-tablet-portrait {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  @include for-desktop {
+    font-size: 20px;
+    margin-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  &--grey {
+    font-family: $family-fifth;
+    color: $gray-light;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+
+    @include for-phone {
+      font-size: 16px;
+      margin-top: 2px;
+      margin-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    @include for-tablet-portrait {
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @include for-desktop {
+      font-size: 20px;
+      margin-top: 15px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    &:last-of-type {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -370,24 +461,20 @@ section {
   color: #000;
   @include for-phone {
     font-size: 14px;
-    line-height: 20px;
     margin-top: 20px;
   }
   @include for-tablet-portrait {
     font-size: 14px;
-    line-height: 20px;
     margin-top: 20px;
   }
 
   @include for-desktop {
     font-size: 20px;
-    line-height: 35px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   @include for-big-desktop {
     font-size: 22px;
-    line-height: 45px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 }
 
@@ -401,9 +488,6 @@ section {
   }
   @include for-desktop {
     width: 780px;
-  }
-  @include for-big-desktop {
-    width: 1010px;
   }
 }
 
@@ -746,6 +830,18 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+
+  @include for-phone {
+    flex-direction: column;
+  }
+
+  @include for-tablet-portrait {
+    flex-direction: column;
+  }
+
+  @include for-desktop {
+    flex: row;
+  }
 }
 
 .flex-columns2 .column {
@@ -753,6 +849,7 @@ section {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  padding-left: 1.75rem;
 }
 
 .flex-columns2 .column .column-1,
@@ -810,17 +907,17 @@ section {
 
   @include for-desktop {
     max-width: unset;
-    width: calc(100% + 51px);
-    top: 49px;
-    left: -66px;
-    padding: 3px;
+    width: 100%;
+    top: 70px;
+    left: -75px;
+    padding: 27px;
   }
   @include for-big-desktop {
     max-width: unset;
-    width: calc(100% + 79px);
-    top: 135px;
-    left: -66px;
-    padding: 16px;
+    width: 100%;
+    top: 70px;
+    left: -75px;
+    padding: 27px;
   }
 }
 
@@ -1053,8 +1150,8 @@ section {
   cursor: pointer;
 }
 
-.btn_purple2 {
-  background-color: #8a83ae;
+.btn--grey {
+  background-color: $gray-light;
   color: #fff;
   font-family: $family-third;
   text-transform: uppercase;
@@ -1062,11 +1159,10 @@ section {
   display: inline-block;
   margin: auto;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
-  border-color: #8a83ae;
+  border: 1px solid $gray-light;
 
   @include for-phone {
     border-radius: 27px;
-    border: 1px solid #8a83ae;
     font-size: 14px;
     line-height: 41px;
     text-align: center;
@@ -1080,7 +1176,6 @@ section {
   @include for-tablet-portrait {
     line-height: 40px;
     border-radius: 27px;
-    border: 2px solid #8a83ae;
     margin-top: 40px;
     margin-bottom: 40px;
     padding: 0 40px;
@@ -1094,7 +1189,6 @@ section {
   @include for-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid #8a83ae;
     position: relative;
     top: 76px;
     left: 134px;
@@ -1105,7 +1199,6 @@ section {
   @include for-big-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid #8a83ae;
     margin-bottom: 110px;
     margin-top: 176px;
     font-size: 18px;
@@ -1114,11 +1207,11 @@ section {
   }
 }
 
-.btn_purple2:hover {
-  color: #8a83ae;
+.btn--grey:hover {
+  color: $gray-light;
   background-color: white;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
-  border-color: white;
+  border-color: $gray-light;
   cursor: pointer;
 }
 
@@ -1189,7 +1282,6 @@ section {
   }
   @include for-big-desktop {
     margin-top: 20px;
-    margin-bottom: 25px;
     font-size: 25px;
     line-height: 40px;
     padding-left: 7px;
@@ -1255,7 +1347,7 @@ section {
 }
 
 /* Flex grid */
-.flex-grid .row {
+.flex-grid .row2 {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -1275,8 +1367,107 @@ section {
   padding: 0 4px;
 }
 
+.video {
+  margin-bottom: 50px;
+}
+
+.column-program {
+  height: 84%;
+}
+
+// Ticker
+$duration: 20s;
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+  // width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background-color: rgba(#000, 0.9);
+  padding-left: 100%;
+  box-sizing: content-box;
+  margin-top: 43px;
+  margin-bottom: 43px;
+
+  &--red {
+    background-color: rgba($redish, 0.9);
+  }
+
+  .ticker {
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+
+    &__item {
+      display: inline-block;
+      font-family: $family-third;
+      padding: 0 2rem;
+      font-size: 40px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+.tockice {
+  max-width: 40%;
+  display: flex;
+  align-content: flex-end;
+}
+
+.column-1 .column-program {
+  height: 84%;
+}
+
+.last-card {
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+  height: 467px;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
 //FOOTER
 .footer {
+  margin-top: 100px;
   background-color: $white;
 }
 .footer-text {
