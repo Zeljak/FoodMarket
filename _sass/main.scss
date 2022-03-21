@@ -68,7 +68,7 @@ a {
   margin-left: 5rem;
   color: white;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   letter-spacing: 3px;
   font-family: $family-third;
@@ -139,11 +139,14 @@ a {
 
 #uvod {
   margin-top: 130px;
-  padding-left: 100px;
-  padding-right: 100px;
 
   @include for-phone {
-    margin-top: 70px;
+    margin-top: 55px;
+    padding: 0;
+  }
+
+  @include for-tablet-portrait {
+    margin-top: 73px;
   }
 }
 section {
@@ -152,16 +155,29 @@ section {
 }
 
 .rubrika {
-  padding-left: 170px;
-  padding-right: 170px;
-
   @include for-phone {
+    width: 200px;
     margin-top: 70px;
+  }
+  @include for-tablet-portrait {
+    width: 280px;
+  }
+
+  @include for-desktop {
+    max-width: 580px;
   }
 }
 
 .raspored {
   display: flex;
+
+  @include for-phone {
+    margin-bottom: 35px;
+  }
+
+  @include for-tablet-landscape {
+    margin-top: 50px;
+  }
 
   img {
     width: 25%;
@@ -171,6 +187,7 @@ section {
 .wrapper {
   @include for-phone {
     width: 300px;
+    padding-left: 0;
   }
   @include for-tablet-portrait {
     width: 480px;
@@ -250,25 +267,21 @@ section {
   .black-title--span {
     font-weight: normal;
     font-style: normal;
+
+    @include for-phone {
+      padding: 0;
+      font-size: 16px;
+    }
   }
 
   @include for-phone {
     font-size: 22px;
-    line-height: 20px;
-    margin-top: 2px;
-    margin-bottom: 10px;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
   }
   @include for-tablet-portrait {
     font-size: 25px;
     line-height: 35px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
   }
 
   @include for-desktop {
@@ -300,7 +313,6 @@ section {
     margin-top: 5px;
     margin-bottom: 10px;
     padding-right: 20px;
-    padding-left: 20px;
   }
 
   @include for-desktop {
@@ -323,7 +335,7 @@ section {
       margin-bottom: 10px;
       padding-right: 10px;
       padding-left: 10px;
-      padding-top: 8px;
+      padding-top: 0px;
       padding-bottom: 8px;
     }
     @include for-tablet-portrait {
@@ -331,7 +343,6 @@ section {
       margin-top: 5px;
       margin-bottom: 10px;
       padding-right: 20px;
-      padding-left: 20px;
     }
 
     @include for-desktop {
@@ -343,6 +354,10 @@ section {
 
     &:last-of-type {
       margin-top: 40px;
+
+      @include for-phone {
+        margin-top: 0px;
+      }
     }
   }
 }
@@ -417,7 +432,7 @@ section {
 @media (min-width: 1025px) {
   .navbar {
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
   }
 
   .navbar a {
@@ -461,7 +476,7 @@ section {
   color: #000;
   @include for-phone {
     font-size: 14px;
-    margin-top: 20px;
+    padding-left: 10px;
   }
   @include for-tablet-portrait {
     font-size: 14px;
@@ -476,12 +491,21 @@ section {
     font-size: 22px;
     margin-top: 20px;
   }
+
+  &--program {
+    @include for-phone {
+      margin-top: -38px;
+    }
+
+    @include for-big-desktop {
+      margin-top: 135px;
+    }
+  }
 }
 
 .wrapper {
   @include for-phone {
     max-width: 300px;
-    padding-left: 16px;
   }
   @include for-tablet-portrait {
     width: 480px;
@@ -841,6 +865,7 @@ section {
 
   @include for-desktop {
     flex: row;
+    margin-bottom: 50px;
   }
 }
 
@@ -849,7 +874,7 @@ section {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  padding-left: 1.75rem;
+  // padding-left: 1.75rem;
 }
 
 .flex-columns2 .column .column-1,
@@ -860,12 +885,12 @@ section {
 .flex-columns2 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   @include for-phone {
     height: 100%;
   }
   @include for-tablet-portrait {
-    height: 88%;
+    height: 100%;
   }
 
   @include for-desktop {
@@ -876,39 +901,32 @@ section {
   }
 }
 
-.restoran_dots {
+.column {
   @include for-phone {
-  }
-  @include for-tablet-portrait {
-  }
-
-  @include for-desktop {
-  }
-  @include for-big-desktop {
-    max-width: 20%;
+    padding-top: 0px;
   }
 }
 
 .card {
   @include for-phone {
-    max-width: unset;
-    width: calc(100% + 41px);
+    width: 75%;
     height: 41%;
-    top: 21px;
-    left: -40px;
+    top: -50px;
+    display: block;
+    margin: 0 auto;
   }
   @include for-tablet-portrait {
-    max-width: unset;
-    width: calc(100% + 71px);
-    height: 44%;
-    top: 49px;
-    left: -66px;
+    width: 80%;
+    height: 143px;
+    top: -50px;
+    display: block;
+    margin: 0 auto;
   }
 
   @include for-desktop {
     max-width: unset;
     width: 100%;
-    top: 70px;
+    top: 9px;
     left: -75px;
     padding: 27px;
   }
@@ -919,6 +937,11 @@ section {
     left: -75px;
     padding: 27px;
   }
+
+  // &--program {
+  //   position: relative;
+  //   top: -135px;
+  // }
 }
 
 .content {
@@ -927,12 +950,12 @@ section {
   @include for-phone {
     font-size: 18px;
     line-height: 30px;
-    padding-bottom: 20px;
     font-weight: 700;
   }
   @include for-tablet-portrait {
-    font-size: 25px;
-    line-height: 50px;
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 700;
   }
 
   @include for-desktop {
@@ -945,50 +968,61 @@ section {
   }
 }
 
+.card-content {
+  @include for-phone {
+    padding: 1.8rem;
+  }
+
+  @include for-tablet-portrait {
+    padding: 2.8rem;
+  }
+}
+
 // button
-.btn_yellow {
-  background-color: #f2ab39;
-  color: #fff;
+.btn--green {
+  background-color: $light-green;
+  color: $gray-light;
   font-family: $family-third;
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
   margin: auto;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
-  border-color: #f2ab39;
+  border-color: $light-green;
 
   @include for-phone {
     border-radius: 27px;
-    border: 1px solid #f2ab39;
-    font-size: 14px;
-    line-height: 41px;
+    font-size: 10px;
+    line-height: 30px;
     text-align: center;
-    padding: 0 14px;
+    padding: 0 18px;
     width: auto;
     position: relative;
-    top: 36px;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $light-green;
   }
 
   @include for-tablet-portrait {
-    line-height: 40px;
     border-radius: 27px;
-    border: 2px solid #f2ab39;
-    margin-top: 40px;
-    padding: 0 40px;
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 30px;
     text-align: center;
+    padding: 0 18px;
+    width: auto;
     position: relative;
-    top: 18px;
-    left: 67px;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $light-green;
   }
 
   @include for-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid #f2ab39;
+    border: 3px solid $light-green;
     position: relative;
-    top: 68px;
-    left: 134px;
+    top: 89px;
+    left: 80px;
     font-size: 16px;
     padding: 22px 58px;
   }
@@ -996,67 +1030,67 @@ section {
   @include for-big-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid #f2ab39;
-    margin-bottom: 110px;
-    margin-top: 176px;
-    font-size: 18px;
-    padding: 25px 69px;
-    margin-left: 222px;
+    border: 3px solid $light-green;
+    position: relative;
+    top: 89px;
+    left: 242px;
+    font-size: 16px;
+    padding: 22px 58px;
   }
 }
 
-.btn_yellow:hover {
-  color: #f2ab39;
+.btn--green:hover {
+  color: $light-green;
   background-color: white;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
-  border-color: white;
+  border-color: $light-green;
   cursor: pointer;
 }
 
-.btn_red {
-  background-color: $redish;
-  color: #fff;
+.btn--pink {
+  background-color: $pinkish;
+  color: white;
   font-family: $family-third;
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
   margin: auto;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
-  border-color: $redish;
+  border-color: $pinkish;
 
   @include for-phone {
     border-radius: 27px;
-    border: 1px solid $redish;
-    font-size: 14px;
-    line-height: 41px;
+    font-size: 10px;
+    line-height: 30px;
     text-align: center;
-    padding: 0 14px;
+    padding: 0 18px;
     width: auto;
     position: relative;
-    top: 40px;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $pinkish;
   }
 
   @include for-tablet-portrait {
-    line-height: 40px;
     border-radius: 27px;
-    border: 2px solid $redish;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 0 40px;
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 30px;
     text-align: center;
+    padding: 0 18px;
+    width: auto;
     position: relative;
-    top: 31px;
-    left: 61px;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $pinkish;
   }
 
   @include for-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid $redish;
+    border: 3px solid $pinkish;
     position: relative;
-    top: 76px;
-    left: 134px;
+    top: 89px;
+    left: 80px;
     font-size: 16px;
     padding: 22px 58px;
   }
@@ -1064,89 +1098,88 @@ section {
   @include for-big-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid $redish;
-    margin-bottom: 110px;
-    margin-top: 176px;
-    font-size: 18px;
-    padding: 25px 69px;
-    margin-left: 222px;
+    border: 3px solid $pinkish;
+    position: relative;
+    top: 89px;
+    left: 242px;
+    font-size: 16px;
+    padding: 22px 58px;
   }
 }
 
-.btn_red:hover {
-  color: $redish;
+.btn--pink:hover {
+  color: $pinkish;
   background-color: white;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
-  border-color: white;
+  border-color: $pinkish;
   cursor: pointer;
 }
 
-.btn_purple {
-  background-color: #8a83ae;
-  color: #fff;
+.btn--apricot {
+  background-color: $apricot;
+  color: white;
   font-family: $family-third;
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
   margin: auto;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
-  border-color: #8a83ae;
+  border-color: $apricot;
 
   @include for-phone {
     border-radius: 27px;
-    border: 1px solid #8a83ae;
-    font-size: 14px;
-    line-height: 41px;
+    font-size: 10px;
+    line-height: 30px;
     text-align: center;
-    padding: 0 15px;
+    padding: 0 18px;
     width: auto;
     position: relative;
-    top: 35px;
-    left: 8px;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $apricot;
   }
 
   @include for-tablet-portrait {
-    line-height: 40px;
     border-radius: 27px;
-    border: 2px solid #8a83ae;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 0 40px;
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 30px;
     text-align: center;
+    padding: 0 18px;
+    width: auto;
     position: relative;
-    top: 33px;
-    left: 62px;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $apricot;
   }
 
   @include for-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid #8a83ae;
-    position: relative;
-    top: 81px;
-    left: 134px;
+    border: 3px solid $apricot;
     font-size: 16px;
     padding: 22px 58px;
+    position: relative;
+    top: 89px;
+    left: 80px;
   }
 
   @include for-big-desktop {
     line-height: 10px;
     border-radius: 35px;
-    border: 3px solid #8a83ae;
-    margin-bottom: 110px;
-    margin-top: 176px;
-    font-size: 18px;
-    padding: 25px 69px;
-    margin-left: 224px;
+    border: 3px solid $apricot;
+    position: relative;
+    top: 89px;
+    left: 192px;
+    font-size: 16px;
+    padding: 22px 58px;
   }
 }
 
-.btn_purple:hover {
-  color: #8a83ae;
+.btn--apricot:hover {
+  color: $pinkish;
   background-color: white;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
-  border-color: white;
+  border-color: $apricot;
   cursor: pointer;
 }
 
@@ -1163,27 +1196,28 @@ section {
 
   @include for-phone {
     border-radius: 27px;
-    font-size: 14px;
-    line-height: 41px;
+    font-size: 10px;
+    line-height: 30px;
     text-align: center;
     padding: 0 18px;
     width: auto;
     position: relative;
-    top: 35px;
-    left: 24px;
+    top: -21px;
+    left: 197px;
   }
 
   @include for-tablet-portrait {
-    line-height: 40px;
     border-radius: 27px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding: 0 40px;
     font-size: 12px;
+    line-height: 40px;
     text-align: center;
+    padding: 0 58px;
+    width: auto;
     position: relative;
-    top: 32px;
-    left: 62px;
+    top: -21px;
+    display: inline-block;
+    margin: 0 auto;
+    left: 300px;
   }
 
   @include for-desktop {
@@ -1199,11 +1233,13 @@ section {
   @include for-big-desktop {
     line-height: 10px;
     border-radius: 35px;
-    margin-bottom: 110px;
-    margin-top: 176px;
-    font-size: 18px;
-    padding: 25px 69px;
-    margin-left: 263px;
+    border: 3px solid $gray-light;
+    position: relative;
+    top: 89px;
+    left: 242px;
+    font-size: 16px;
+    padding: 22px 58px;
+    margin-top: 50px;
   }
 }
 
@@ -1262,15 +1298,17 @@ section {
   color: #000;
   @include for-phone {
     font-size: 14px;
-    line-height: 30px;
+    line-height: 20px;
     padding-left: 9px;
     padding-right: 20px;
+    margin-bottom: 50px;
   }
   @include for-tablet-portrait {
     font-size: 14px;
-    line-height: 22px;
-    padding-left: 8px;
-    // padding-right: 20px;
+    line-height: 20px;
+    padding-left: 9px;
+    padding-right: 20px;
+    margin-bottom: 50px;
   }
 
   @include for-desktop {
@@ -1279,12 +1317,62 @@ section {
     padding-left: 10px;
     padding-right: 21px;
     margin-bottom: 15px;
+    margin-top: 94px;
   }
   @include for-big-desktop {
-    margin-top: 20px;
     font-size: 25px;
     line-height: 40px;
-    padding-left: 7px;
+    margin-top: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &--toro {
+    @include for-phone {
+      margin-top: -38px;
+    }
+
+    @include for-big-desktop {
+      margin-top: 80px;
+    }
+  }
+
+  &--lari {
+    @include for-phone {
+      margin-top: -43px;
+    }
+
+    @include for-big-desktop {
+      margin-top: 77px;
+    }
+  }
+
+  &--magnolia {
+    @include for-phone {
+      margin-top: -14px;
+    }
+  }
+
+  &--mentoriranje {
+    @include for-phone {
+      margin-top: -44px;
+      margin-bottom: 20px;
+    }
+    @include for-big-desktop {
+      margin-top: 90px;
+      margin-bottom: 64px;
+    }
+  }
+
+  &--kresic {
+    @include for-phone {
+      margin-bottom: 25px;
+    }
+
+    @include for-big-desktop {
+      margin-top: 90px;
+      margin-bottom: 64px;
+    }
   }
 }
 
@@ -1351,6 +1439,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  margin-bottom: 50px;
 
   @include for-phone {
     margin-top: -38px;
@@ -1369,6 +1458,18 @@ section {
 
 .video {
   margin-bottom: 50px;
+
+  @include for-phone {
+    margin-bottom: 17px;
+  }
+
+  @include for-desktop {
+    margin-top: 70px;
+  }
+
+  @include for-big-desktop {
+    margin-top: 70px;
+  }
 }
 
 .column-program {
@@ -1414,8 +1515,28 @@ $duration: 20s;
   margin-top: 43px;
   margin-bottom: 43px;
 
+  @include for-phone {
+    margin-top: 0px;
+    height: 2rem;
+  }
+
+  @include for-tablet-portrait {
+    margin-top: 0px;
+    height: 2rem;
+  }
+
   &--red {
     background-color: rgba($redish, 0.9);
+
+    @include for-phone {
+      margin-top: 0px;
+      height: 2rem;
+    }
+
+    @include for-tablet-portrait {
+      margin-top: 0px;
+      height: 2rem;
+    }
   }
 
   .ticker {
@@ -1435,6 +1556,16 @@ $duration: 20s;
     -webkit-animation-duration: $duration;
     animation-duration: $duration;
 
+    @include for-phone {
+      height: 2rem;
+      line-height: 2rem;
+    }
+
+    @include for-tablet-portrait {
+      height: 2rem;
+      line-height: 2rem;
+    }
+
     &__item {
       display: inline-block;
       font-family: $family-third;
@@ -1443,14 +1574,33 @@ $duration: 20s;
       letter-spacing: 4px;
       font-weight: bold;
       color: white;
+
+      @include for-phone {
+        font-size: 16px;
+        padding: 0;
+      }
+
+      @include for-tablet-portrait {
+        font-size: 16px;
+        padding: 0;
+      }
     }
   }
 }
 
 .tockice {
   max-width: 40%;
-  display: flex;
-  align-content: flex-end;
+  display: block;
+  margin: 0 auto;
+
+  @include for-phone {
+    // max-width: 20%;
+    display: none;
+  }
+
+  @include for-tablet-portrait {
+    display: none;
+  }
 }
 
 .column-1 .column-program {
@@ -1463,51 +1613,127 @@ $duration: 20s;
   width: 800px;
   height: 467px;
   box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+  padding: 35px 0;
+  margin-top: 100px;
+
+  @include for-phone {
+    width: 260px;
+    height: 174px;
+    margin-top: 0;
+  }
+
+  @include for-tablet-portrait {
+    width: 300px;
+    height: 220px;
+    margin-top: 0;
+  }
+
+  h4,
+  span {
+    font-family: $family-secondary;
+    font-size: 50px;
+    font-style: italic;
+    line-height: 1.6;
+
+    &:first-child {
+      margin-bottom: 65px;
+
+      @include for-phone {
+        margin-bottom: 10px;
+      }
+
+      @include for-tablet-portrait {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include for-phone {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    @include for-tablet-portrait {
+      font-size: 22px;
+    }
+  }
+}
+
+#mentoriranje {
+  margin-top: 130px;
+
+  @include for-phone {
+    margin-top: 55px;
+    padding: 0;
+  }
+
+  @include for-tablet-portrait {
+    margin-top: 73px;
+  }
+}
+
+.mentoriranje {
+  &__section {
+    max-width: 1500px;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 50px;
+
+    @include for-phone {
+      grid-gap: 0.5rem;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 35px;
+    }
+  }
 }
 
 //FOOTER
 .footer {
-  margin-top: 100px;
   background-color: $white;
-}
-.footer-text {
-  @include for-phone {
-    font-size: 14px;
-    line-height: 25px;
-  }
-  @include for-tablet-portrait {
-    font-size: 14px;
-    line-height: 22px;
+  margin-top: 10px;
+
+  &__text {
+    font-family: $family-third;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 9;
+
+    @include for-phone {
+      font-size: 14px;
+      line-height: 25px;
+      margin-bottom: 25px;
+    }
+    @include for-tablet-portrait {
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
+
+    @include for-desktop {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    @include for-big-desktop {
+      font-size: 20px;
+    }
   }
 
-  @include for-desktop {
-    font-size: 16px;
-    line-height: 30px;
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 40px;
+
+    @include for-phone {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 13px;
+    }
+
+    @include for-tablet-portrait {
+      grid-gap: 30px;
+    }
   }
-  @include for-big-desktop {
-    font-size: 18px;
-    line-height: 40px;
-  }
-}
-.container-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-
-.footer-row {
-  display: inline-block;
-  padding: 20px;
-}
-
-.logo {
-  height: 41px;
-  margin-bottom: 20px;
-}
-
-.footer-row img {
-  width: 12%;
-  height: 12%;
-  padding: 3px;
 }
