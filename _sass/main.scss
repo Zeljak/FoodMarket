@@ -1784,12 +1784,25 @@ $blockLengths: 1, 2, 3, 4;
   justify-content: center;
   flex-direction: column;
   padding: 0.5rem 1rem;
-  background-color: orange;
+  background-color: rgb(255, 217, 0);
   border-radius: 0.2rem;
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.4;
   text-align: center;
+
+  @include for-phone {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+
+  &--day {
+    font-size: 1.5rem;
+
+    @include for-phone {
+      font-size: 1rem;
+    }
+  }
 
   span {
     display: block;
