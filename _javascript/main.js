@@ -1,7 +1,9 @@
-
-setTimeout(function() {
+if (location.hash) {
 	window.scrollTo(0, 0);
-}, 1);
+	setTimeout(function() {
+		window.scrollTo(0, 0);
+	}, 1);
+}
 
 $(function() {
 	window.scrollTo(0, 0);
@@ -9,11 +11,11 @@ $(function() {
 	// variables
 	const hamburger = document.querySelector('.hamburger');
 	const navMenu = document.querySelector('.nav-menu');
-	const adress = window.location;
+	const hash = location.hash;
 
 	
-	// funcions
-	const mobileMenu = function () {
+	// funtcions
+	const mobileMenu = () => {
 		hamburger.classList.toggle('active');
 		navMenu.classList.toggle('active');
 	};
@@ -44,8 +46,8 @@ $(function() {
 	});
 
 	// on load action
-	if (adress.hash) {
-		pageScroll(adress.hash);
+	if (hash) {
+		pageScroll(hash);
 
 		history.pushState('', document.title, window.location.pathname + window.location.search);
 	}
