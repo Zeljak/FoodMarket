@@ -13282,6 +13282,7 @@ section {
           box-sizing: content-box;
   margin-top: 43px;
   margin-bottom: 43px;
+  position: relative;
 }
 @media (max-width: 500px) {
   .ticker-wrap {
@@ -13310,14 +13311,13 @@ section {
     height: 2rem;
   }
 }
-.ticker-wrap .ticker {
+.ticker-wrap .ticker-inner {
   display: inline-block;
   height: 4rem;
   line-height: 4rem;
-  white-space: nowrap;
-  padding-right: 100%;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  max-width: unset;
+  position: absolute;
+  left: 0;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
@@ -13326,6 +13326,27 @@ section {
   animation-name: ticker;
   -webkit-animation-duration: 20s;
   animation-duration: 20s;
+}
+@media (max-width: 500px) {
+  .ticker-wrap .ticker-inner {
+    height: 2rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  .ticker-wrap .ticker-inner {
+    height: 2rem;
+    line-height: 2rem;
+  }
+}
+.ticker-wrap .ticker {
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  max-width: unset;
 }
 @media (max-width: 500px) {
   .ticker-wrap .ticker {
@@ -13338,6 +13359,10 @@ section {
     height: 2rem;
     line-height: 2rem;
   }
+}
+.ticker-wrap .ticker--copy {
+  left: 100%;
+  position: absolute;
 }
 .ticker-wrap .ticker__item {
   display: inline-block;

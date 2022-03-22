@@ -1523,6 +1523,7 @@ $duration: 20s;
   box-sizing: content-box;
   margin-top: 43px;
   margin-bottom: 43px;
+  position: relative;
 
   @include for-phone {
     margin-top: 0px;
@@ -1548,14 +1549,13 @@ $duration: 20s;
     }
   }
 
-  .ticker {
+  .ticker-inner {
     display: inline-block;
     height: 4rem;
     line-height: 4rem;
-    white-space: nowrap;
-    padding-right: 100%;
-    box-sizing: content-box;
-
+    max-width: unset;
+    position: absolute;
+    left: 0;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
@@ -1569,10 +1569,35 @@ $duration: 20s;
       height: 2rem;
       line-height: 2rem;
     }
+  
+    @include for-tablet-portrait {
+      height: 2rem;
+      line-height: 2rem;
+    }
+  }
+
+  .ticker {
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: nowrap;
+    // padding-right: 100%;
+    box-sizing: content-box;
+    max-width: unset;
+
+    @include for-phone {
+      height: 2rem;
+      line-height: 2rem;
+    }
 
     @include for-tablet-portrait {
       height: 2rem;
       line-height: 2rem;
+    }
+
+    &--copy {
+      left: 100%;
+      position: absolute;
     }
 
     &__item {
