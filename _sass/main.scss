@@ -68,7 +68,7 @@ a {
   margin-left: 5rem;
   color: white;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
   letter-spacing: 3px;
   font-family: $family-third;
@@ -149,6 +149,15 @@ a {
     margin-top: 73px;
   }
 }
+
+#program {
+  margin-bottom: 100px;
+
+  @include for-phone {
+    margin-bottom: 0;
+  }
+}
+
 section {
   max-width: 1400px;
   margin: 0 auto;
@@ -937,11 +946,6 @@ section {
     left: -75px;
     padding: 27px;
   }
-
-  // &--program {
-  //   position: relative;
-  //   top: -135px;
-  // }
 }
 
 .content {
@@ -1688,6 +1692,178 @@ $duration: 20s;
       margin-bottom: 35px;
     }
   }
+}
+
+$blockTimes: 800, 830, 900, 930, 1000, 1030, 1100, 1130, 1200, 1230, 1300, 1330,
+  1400, 1430, 1500, 1530, 1600, 1630, 1700, 1730, 1800, 1830, 1900, 1930, 2000,
+  2030, 2100, 2130;
+$blockLengths: 1, 2, 3, 4;
+
+#raspored__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.scheduleContainer {
+  display: grid;
+  grid-gap: 0.2rem;
+
+  grid-template-columns: 5rem repeat(4, 1fr);
+  grid-template-rows: repeat(28, 1fr);
+  grid-template-areas:
+    "time800 stage stage stage stage"
+    "time830 stage stage stage stage"
+    "time900 stage stage stage stage"
+    "time930 stage stage stage stage"
+    "time1000 stage stage stage stage"
+    "time1030 stage stage stage stage"
+    "time1100 stage stage stage stage"
+    "time1130 stage stage stage stage"
+    "time1200 stage stage stage stage"
+    "time1230 stage stage stage stage"
+    "time1300 stage stage stage stage"
+    "time1330 stage stage stage stage"
+    "time1400 stage stage stage stage"
+    "time1430 stage stage stage stage"
+    "time1500 stage stage stage stage"
+    "time1530 stage stage stage stage"
+    "time1600 stage stage stage stage"
+    "time1630 stage stage stage stage"
+    "time1700 stage stage stage stage"
+    "time1730 stage stage stage stage"
+    "time1800 stage stage stage stage"
+    "time1830 stage stage stage stage"
+    "time1900 stage stage stage stage"
+    "time1930 stage stage stage stage"
+    "time2000 stage stage stage stage"
+    "time2030 stage stage stage stage"
+    "time2100 stage stage stage stage"
+    "time2130 stage stage stage stage";
+  margin-bottom: 100px;
+  @include for-phone {
+    margin-bottom: 50px;
+  }
+}
+
+/**
+ * Time
+ */
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: thin dotted #ccc;
+  height: 100%;
+  padding: 0 0.5rem;
+
+  @each $time in $blockTimes {
+    &.start-#{$time} {
+      grid-area: time#{$time};
+    }
+  }
+
+  &[class*="30"]:not(.start-1300) {
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+}
+
+/**
+ * Event
+ */
+.event {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
+
+  span {
+    display: block;
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  @each $time in $blockTimes {
+    &.start-#{$time} {
+      grid-row-start: time#{$time};
+    }
+  }
+
+  @each $time in $blockTimes {
+    &.end-#{$time} {
+      grid-row-end: time#{$time};
+    }
+  }
+
+  @each $length in $blockLengths {
+    &.length-#{$length} {
+      grid-column-end: span #{$length};
+    }
+  }
+
+  &.stage-orange {
+    background-color: #eab57e;
+    text-align: center;
+  }
+  &.stage-green {
+    background-color: #c6e3a0;
+    text-align: center;
+  }
+  &.stage-pink {
+    background-color: #ff8a65;
+    text-align: center;
+  }
+  &.stage-puder {
+    background-color: #c59d99;
+    text-align: center;
+  }
+  &.stage-red {
+    background-color: #c94f44;
+    text-align: center;
+  }
+  &.stage-grey {
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+}
+
+.raspored__section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include for-phone {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 0;
+  }
+  @include for-tablet-portrait {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-desktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include for-big-desktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.raspored__dani {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
 }
 
 //FOOTER

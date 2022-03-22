@@ -11528,7 +11528,7 @@ a {
   margin-left: 5rem;
   color: white;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
   letter-spacing: 3px;
   font-family: "Roboto", sans-serif;
@@ -11622,6 +11622,15 @@ a {
 @media (min-width: 501px) and (max-width: 900px) {
   #uvod {
     margin-top: 73px;
+  }
+}
+
+#program {
+  margin-bottom: 100px;
+}
+@media (max-width: 500px) {
+  #program {
+    margin-bottom: 0;
   }
 }
 
@@ -13458,6 +13467,534 @@ section {
     padding-right: 10px;
     margin-bottom: 35px;
   }
+}
+
+#raspored__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.scheduleContainer {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.2rem;
+  -ms-grid-columns: 5rem 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr;
+  grid-template-columns: 5rem repeat(4, 1fr);
+  -ms-grid-rows: 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr 0.2rem 1fr;
+  grid-template-rows: repeat(28, 1fr);
+      grid-template-areas: "time800 stage stage stage stage" "time830 stage stage stage stage" "time900 stage stage stage stage" "time930 stage stage stage stage" "time1000 stage stage stage stage" "time1030 stage stage stage stage" "time1100 stage stage stage stage" "time1130 stage stage stage stage" "time1200 stage stage stage stage" "time1230 stage stage stage stage" "time1300 stage stage stage stage" "time1330 stage stage stage stage" "time1400 stage stage stage stage" "time1430 stage stage stage stage" "time1500 stage stage stage stage" "time1530 stage stage stage stage" "time1600 stage stage stage stage" "time1630 stage stage stage stage" "time1700 stage stage stage stage" "time1730 stage stage stage stage" "time1800 stage stage stage stage" "time1830 stage stage stage stage" "time1900 stage stage stage stage" "time1930 stage stage stage stage" "time2000 stage stage stage stage" "time2030 stage stage stage stage" "time2100 stage stage stage stage" "time2130 stage stage stage stage";
+  margin-bottom: 100px;
+}
+@media (max-width: 500px) {
+  .scheduleContainer {
+    margin-bottom: 50px;
+  }
+}
+
+/**
+ * Time
+ */
+.time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-top: thin dotted #ccc;
+  height: 100%;
+  padding: 0 0.5rem;
+}
+.time.start-800 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: time800;
+}
+.time.start-830 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: time830;
+}
+.time.start-900 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: time900;
+}
+.time.start-930 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: time930;
+}
+.time.start-1000 {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  grid-area: time1000;
+}
+.time.start-1030 {
+  -ms-grid-row: 11;
+  -ms-grid-column: 1;
+  grid-area: time1030;
+}
+.time.start-1100 {
+  -ms-grid-row: 13;
+  -ms-grid-column: 1;
+  grid-area: time1100;
+}
+.time.start-1130 {
+  -ms-grid-row: 15;
+  -ms-grid-column: 1;
+  grid-area: time1130;
+}
+.time.start-1200 {
+  -ms-grid-row: 17;
+  -ms-grid-column: 1;
+  grid-area: time1200;
+}
+.time.start-1230 {
+  -ms-grid-row: 19;
+  -ms-grid-column: 1;
+  grid-area: time1230;
+}
+.time.start-1300 {
+  -ms-grid-row: 21;
+  -ms-grid-column: 1;
+  grid-area: time1300;
+}
+.time.start-1330 {
+  -ms-grid-row: 23;
+  -ms-grid-column: 1;
+  grid-area: time1330;
+}
+.time.start-1400 {
+  -ms-grid-row: 25;
+  -ms-grid-column: 1;
+  grid-area: time1400;
+}
+.time.start-1430 {
+  -ms-grid-row: 27;
+  -ms-grid-column: 1;
+  grid-area: time1430;
+}
+.time.start-1500 {
+  -ms-grid-row: 29;
+  -ms-grid-column: 1;
+  grid-area: time1500;
+}
+.time.start-1530 {
+  -ms-grid-row: 31;
+  -ms-grid-column: 1;
+  grid-area: time1530;
+}
+.time.start-1600 {
+  -ms-grid-row: 33;
+  -ms-grid-column: 1;
+  grid-area: time1600;
+}
+.time.start-1630 {
+  -ms-grid-row: 35;
+  -ms-grid-column: 1;
+  grid-area: time1630;
+}
+.time.start-1700 {
+  -ms-grid-row: 37;
+  -ms-grid-column: 1;
+  grid-area: time1700;
+}
+.time.start-1730 {
+  -ms-grid-row: 39;
+  -ms-grid-column: 1;
+  grid-area: time1730;
+}
+.time.start-1800 {
+  -ms-grid-row: 41;
+  -ms-grid-column: 1;
+  grid-area: time1800;
+}
+.time.start-1830 {
+  -ms-grid-row: 43;
+  -ms-grid-column: 1;
+  grid-area: time1830;
+}
+.time.start-1900 {
+  -ms-grid-row: 45;
+  -ms-grid-column: 1;
+  grid-area: time1900;
+}
+.time.start-1930 {
+  -ms-grid-row: 47;
+  -ms-grid-column: 1;
+  grid-area: time1930;
+}
+.time.start-2000 {
+  -ms-grid-row: 49;
+  -ms-grid-column: 1;
+  grid-area: time2000;
+}
+.time.start-2030 {
+  -ms-grid-row: 51;
+  -ms-grid-column: 1;
+  grid-area: time2030;
+}
+.time.start-2100 {
+  -ms-grid-row: 53;
+  -ms-grid-column: 1;
+  grid-area: time2100;
+}
+.time.start-2130 {
+  -ms-grid-row: 55;
+  -ms-grid-column: 1;
+  grid-area: time2130;
+}
+.time[class*="30"]:not(.start-1300) {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/**
+ * Event
+ */
+.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
+}
+.event span {
+  display: block;
+  width: 100%;
+  font-size: 0.8em;
+  font-weight: normal;
+  text-align: center;
+}
+.event.start-800 {
+  -ms-grid-row: time800;
+      grid-row-start: time800;
+}
+.event.start-830 {
+  -ms-grid-row: time830;
+      grid-row-start: time830;
+}
+.event.start-900 {
+  -ms-grid-row: time900;
+      grid-row-start: time900;
+}
+.event.start-930 {
+  -ms-grid-row: time930;
+      grid-row-start: time930;
+}
+.event.start-1000 {
+  -ms-grid-row: time1000;
+      grid-row-start: time1000;
+}
+.event.start-1030 {
+  -ms-grid-row: time1030;
+      grid-row-start: time1030;
+}
+.event.start-1100 {
+  -ms-grid-row: time1100;
+      grid-row-start: time1100;
+}
+.event.start-1130 {
+  -ms-grid-row: time1130;
+      grid-row-start: time1130;
+}
+.event.start-1200 {
+  -ms-grid-row: time1200;
+      grid-row-start: time1200;
+}
+.event.start-1230 {
+  -ms-grid-row: time1230;
+      grid-row-start: time1230;
+}
+.event.start-1300 {
+  -ms-grid-row: time1300;
+      grid-row-start: time1300;
+}
+.event.start-1330 {
+  -ms-grid-row: time1330;
+      grid-row-start: time1330;
+}
+.event.start-1400 {
+  -ms-grid-row: time1400;
+      grid-row-start: time1400;
+}
+.event.start-1430 {
+  -ms-grid-row: time1430;
+      grid-row-start: time1430;
+}
+.event.start-1500 {
+  -ms-grid-row: time1500;
+      grid-row-start: time1500;
+}
+.event.start-1530 {
+  -ms-grid-row: time1530;
+      grid-row-start: time1530;
+}
+.event.start-1600 {
+  -ms-grid-row: time1600;
+      grid-row-start: time1600;
+}
+.event.start-1630 {
+  -ms-grid-row: time1630;
+      grid-row-start: time1630;
+}
+.event.start-1700 {
+  -ms-grid-row: time1700;
+      grid-row-start: time1700;
+}
+.event.start-1730 {
+  -ms-grid-row: time1730;
+      grid-row-start: time1730;
+}
+.event.start-1800 {
+  -ms-grid-row: time1800;
+      grid-row-start: time1800;
+}
+.event.start-1830 {
+  -ms-grid-row: time1830;
+      grid-row-start: time1830;
+}
+.event.start-1900 {
+  -ms-grid-row: time1900;
+      grid-row-start: time1900;
+}
+.event.start-1930 {
+  -ms-grid-row: time1930;
+      grid-row-start: time1930;
+}
+.event.start-2000 {
+  -ms-grid-row: time2000;
+      grid-row-start: time2000;
+}
+.event.start-2030 {
+  -ms-grid-row: time2030;
+      grid-row-start: time2030;
+}
+.event.start-2100 {
+  -ms-grid-row: time2100;
+      grid-row-start: time2100;
+}
+.event.start-2130 {
+  -ms-grid-row: time2130;
+      grid-row-start: time2130;
+}
+.event.end-800 {
+  -ms-grid-row-span: time800;
+  grid-row-end: time800;
+}
+.event.end-830 {
+  -ms-grid-row-span: time830;
+  grid-row-end: time830;
+}
+.event.end-900 {
+  -ms-grid-row-span: time900;
+  grid-row-end: time900;
+}
+.event.end-930 {
+  -ms-grid-row-span: time930;
+  grid-row-end: time930;
+}
+.event.end-1000 {
+  -ms-grid-row-span: time1000;
+  grid-row-end: time1000;
+}
+.event.end-1030 {
+  -ms-grid-row-span: time1030;
+  grid-row-end: time1030;
+}
+.event.end-1100 {
+  -ms-grid-row-span: time1100;
+  grid-row-end: time1100;
+}
+.event.end-1130 {
+  -ms-grid-row-span: time1130;
+  grid-row-end: time1130;
+}
+.event.end-1200 {
+  -ms-grid-row-span: time1200;
+  grid-row-end: time1200;
+}
+.event.end-1230 {
+  -ms-grid-row-span: time1230;
+  grid-row-end: time1230;
+}
+.event.end-1300 {
+  -ms-grid-row-span: time1300;
+  grid-row-end: time1300;
+}
+.event.end-1330 {
+  -ms-grid-row-span: time1330;
+  grid-row-end: time1330;
+}
+.event.end-1400 {
+  -ms-grid-row-span: time1400;
+  grid-row-end: time1400;
+}
+.event.end-1430 {
+  -ms-grid-row-span: time1430;
+  grid-row-end: time1430;
+}
+.event.end-1500 {
+  -ms-grid-row-span: time1500;
+  grid-row-end: time1500;
+}
+.event.end-1530 {
+  -ms-grid-row-span: time1530;
+  grid-row-end: time1530;
+}
+.event.end-1600 {
+  -ms-grid-row-span: time1600;
+  grid-row-end: time1600;
+}
+.event.end-1630 {
+  -ms-grid-row-span: time1630;
+  grid-row-end: time1630;
+}
+.event.end-1700 {
+  -ms-grid-row-span: time1700;
+  grid-row-end: time1700;
+}
+.event.end-1730 {
+  -ms-grid-row-span: time1730;
+  grid-row-end: time1730;
+}
+.event.end-1800 {
+  -ms-grid-row-span: time1800;
+  grid-row-end: time1800;
+}
+.event.end-1830 {
+  -ms-grid-row-span: time1830;
+  grid-row-end: time1830;
+}
+.event.end-1900 {
+  -ms-grid-row-span: time1900;
+  grid-row-end: time1900;
+}
+.event.end-1930 {
+  -ms-grid-row-span: time1930;
+  grid-row-end: time1930;
+}
+.event.end-2000 {
+  -ms-grid-row-span: time2000;
+  grid-row-end: time2000;
+}
+.event.end-2030 {
+  -ms-grid-row-span: time2030;
+  grid-row-end: time2030;
+}
+.event.end-2100 {
+  -ms-grid-row-span: time2100;
+  grid-row-end: time2100;
+}
+.event.end-2130 {
+  -ms-grid-row-span: time2130;
+  grid-row-end: time2130;
+}
+.event.length-1 {
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+}
+.event.length-2 {
+  -ms-grid-column-span: 2;
+  grid-column-end: span 2;
+}
+.event.length-3 {
+  -ms-grid-column-span: 3;
+  grid-column-end: span 3;
+}
+.event.length-4 {
+  -ms-grid-column-span: 4;
+  grid-column-end: span 4;
+}
+.event.stage-orange {
+  background-color: #eab57e;
+  text-align: center;
+}
+.event.stage-green {
+  background-color: #c6e3a0;
+  text-align: center;
+}
+.event.stage-pink {
+  background-color: #ff8a65;
+  text-align: center;
+}
+.event.stage-puder {
+  background-color: #c59d99;
+  text-align: center;
+}
+.event.stage-red {
+  background-color: #c94f44;
+  text-align: center;
+}
+.event.stage-grey {
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.raspored__section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 500px) {
+  .raspored__section {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 0;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  .raspored__section {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 901px) and (max-width: 1024px) {
+  .raspored__section {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .raspored__section {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.raspored__dani {
+  margin-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
 }
 
 .footer {
