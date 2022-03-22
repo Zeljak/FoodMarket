@@ -11633,6 +11633,13 @@ a {
   }
 }
 
+@media (min-width: 901) and (max-width: 1200) {
+  #ilustracija {
+    position: relative;
+    top: -72px;
+  }
+}
+
 #program {
   margin-bottom: 100px;
 }
@@ -11836,7 +11843,6 @@ section {
     line-height: 44px;
     margin-top: 10px;
     padding-right: 20px;
-    padding-left: 20px;
   }
 }
 
@@ -11870,7 +11876,6 @@ section {
     font-size: 20px;
     margin-top: 15px;
     padding-right: 20px;
-    padding-left: 20px;
   }
 }
 .subtitle--grey {
@@ -11904,11 +11909,7 @@ section {
     font-size: 20px;
     margin-top: 15px;
     padding-right: 20px;
-    padding-left: 20px;
   }
-}
-.subtitle--grey:last-of-type {
-  margin-top: 40px;
 }
 @media (max-width: 500px) {
   .subtitle--grey:last-of-type {
@@ -13718,6 +13719,12 @@ section {
   text-align: center;
 }
 @media (max-width: 500px) {
+  .event {
+    padding: 0;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
   .event {
     padding: 0;
     font-size: 0.8rem;
