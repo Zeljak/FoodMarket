@@ -11550,7 +11550,8 @@ a {
   }
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link--current {
   color: #c94f44;
   border-bottom: 1px solid #c94f44;
 }
