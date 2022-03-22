@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FoodMarket by Gourmet</title>
+    <meta name="title" content="FoodMarket" />
+    <meta name="description" content="Food Market by Gourmet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <link rel="stylesheet" href="css/main.css?v=1" />
+
+    <!-- Facebook -->
+    <meta
+      property="og:url"
+      content="https://native.story.hr/preview/FoodMarket/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FoodMarket by Gourmet" />
+    <meta property="og:description" content="FoodMarket by Gourmet" />
+    <meta
+      property="og:image"
+      content="https://native.story.hr/preview/FoodMarket/share.jpg"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="fb:app_id" content="684146431996498" />
+
+	<!-- favicon -->
+	<link rel="icon" type="image/png" href="./_assets/images/favicon-32x32.png">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+	  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,700&family=Roboto:wght@700&family=Urbanist&display=swap"
+	  rel="stylesheet"
+	/>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-267402-38"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-267402-38", { anonymize_ip: true });
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+
+      <!-- Navigation -->
+    	<nav class="navbar">
+        	<ul class="nav-menu">
+          		<li class="nav-item">
+            		<a href="index.html" class="nav-link">Home</a>
+          		</li>
+          		<li class="nav-item">
+            		<a href="mentoriranje.html" class="nav-link">Mentoriranje</a>
+          		</li>
+          		<li class="nav-item">
+            		<a href="#" class="nav-link nav-link--current">O restoranima</a>
+          		</li>
+          		<li class="nav-item">
+            		<a href="raspored.html" class="nav-link">Raspored</a>
+          		</li>
+        	</ul>
+        	<div class="hamburger">
+          		<span class="bar"></span>
+          		<span class="bar"></span>
+          		<span class="bar"></span>
+        	</div>
+        </nav>
+    </header>
+
+	<!-- O restoranima -->
+	<section class="flex-columns2" id="restorani">
+		<div class="row">
+		  <div class="column">
+			<div class="column-program">
+			  <img
+				class="program"
+				src="./_assets/images/FoodMarket_pozadina.png"
+				alt="FoodMarket"
+			  />
+			</div>
+		  </div>
+		  <div class="column">
+			<div class="column-2">
+				<div class="card">
+					<img class="tockice" src="./_assets/images/tockice_tamno_sive.png" alt="Sive točkice">
+					<div class="card-content has-text-centered">
+						
+					  <div class="content has-text-centered">
+						Restorani
+					  </div>
+					</div>
+				  </div>
+				  
+			</div>
+		  </div>
+		</div>
+	</section>
+
+	<!-- RougeMarin -->
+	<section class="flex-columns2 wrapper">
+		<div class="row">
+		  <div class="column">
+			<div class="column-1">
+			  <img
+				class="RougeMarin"
+				src="./_assets/images/Marin_Medak2.png"
+				alt="Marin Medak"
+			  />
+			</div>
+		  </div>
+		  <div class="column">
+			<div class="column-2">
+				<div class="card">
+					<img class="tockice" src="./_assets/images/tockice_zelene.png" alt="Zelene točkice">	
+					<div class="card-content has-text-centered">
+					  <div class="content has-text-centered">
+						RougeMarin
+					  </div>
+					</div>				 
+				</div>
+			<a class="btn--green" href="https://www.rougemarin.hr/doma" target="_blank">SAZNAJ VIŠE</a>
+		  </div>
+		</div>
+		</div>
+	</section>
+
+	<section class="wrapper">
+		<div>
+			  <p class="opis_restorana">Zagrebački restoran RougeMarin na Food Market by StoryGourmet - predstavit će tri jela koja su posebno za ovaj event osmislili njegovi kreativni chefovi Josip Hodak, Filip Bačan i Željko Lopar. Chef i vlasnik RougeMarina Marin Medak otkriva o kojim je delicijama riječ: "Jela koja ćete moći probati u Tvornici su empanada s braised kunićem, sendvič s dimljenim junećim jezikom i tostiranom focacciom te Bao Buns s dimljenim buncekom glaziranim s umakom hoisin."</p>
+		</div>
+	</section>
+
+    <!-- RougeMarin Gallery -->
+    <div class="cases flex-grid section-padding" id="cases">
+      <div class="row2">
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="25">
+          		<a
+            	href="./_assets/images/rougemarin1.jpg" class="gallBtn" data-size="1421x1276"
+            	data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+            	<img src="./_assets/images/rougemarin1.jpg" alt="RougeMarin"/></a>
+			</figure>
+			<figure class="gallItem photo-big" data-index="26">
+				<a
+			  	href="./_assets/images/rougemarin2.jpg" class="gallBtn" data-size="1421x1276"
+			  	data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+			  	<img src="./_assets/images/rougemarin2.jpg" alt="RougeMarin"/></a>
+		  </figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="27">
+				<a
+			  	href="./_assets/images/rougemarin3.jpg" class="gallBtn" data-size="1415x1276"
+			  	data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+			  	<img src="./_assets/images/rougemarin3.jpg" alt="RougeMarin"/></a>
+		  	</figure>
+		  	<figure class="gallItem photo-big" data-index="28">
+				<a
+		  		href="./_assets/images/rougemarin4.jpg" class="gallBtn" data-size="1415x1276"
+		  		data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+		  		<img src="./_assets/images/rougemarin4.jpg" alt="RougeMarin"/></a>
+	  		</figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="29">
+				<a
+		  		href="./_assets/images/rougemarin5.jpg" class="gallBtn" data-size="1415x1276"
+		  		data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+		  		<img src="./_assets/images/rougemarin5.jpg" alt="RougeMarin"/></a>
+	  		</figure>
+			<figure class="gallItem photo-big" data-index="30">
+				<a
+		  		href="./_assets/images/rougemarin6.jpg" class="gallBtn" data-size="1415x1276"
+		  		data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+		  		<img src="./_assets/images/rougemarin6.jpg" alt="RougeMarin"/></a>
+	  		</figure>
+      	</div>
+	  	<div class="column">
+			<figure class="gallItem photo-big" data-index="31">
+				<a
+			  	href="./_assets/images/rougemarin7.jpg" class="gallBtn" data-size="1421x1276"
+			  	data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+			  	<img src="./_assets/images/rougemarin7.jpg" alt="RougeMarin"/></a>
+		  	</figure>
+			<figure class="gallItem photo-big" data-index="32">
+				<a
+		  		href="./_assets/images/rougemarin8.jpg" class="gallBtn" data-size="1421x1276"
+		  		data-title="RougeMarin"
+				data-lightbox="RougeMarin">
+		  		<img src="./_assets/images/rougemarin8.jpg" alt="RougeMarin"/></a>
+	  		</figure>
+  		</div>
+    </div>
+	</div>
+	
+	<!-- EL TORO -->
+	<section class="flex-columns2 wrapper">
+		<div class="row">
+		  <div class="column">
+			<div class="column-1">
+			  <img
+				src="./_assets/images/mario_mihelj.jpg"
+				alt="Mario Mihelj"
+			  />
+			</div>
+		  </div>
+		  <div class="column">
+			<div class="column-2">
+				<div class="card">
+					<img class="tockice" src="./_assets/images/tockice_puder.png" alt="Roza točkice">
+					<div class="card-content has-text-centered">
+					  <div class="content has-text-centered">
+						El Toro
+					  </div>
+					</div>
+				</div>
+				  	<a class="btn--pink" href="https://eltoro.hr/" class="btn--pink" target="_blank">SAZNAJ VIŠE</a>
+			</div>
+		  </div>
+		</div>
+	</section>
+
+	<section class="wrapper">
+		  <div>
+			  <p class="opis_restorana opis_restorana--toro">Zagrebački chef Mario Mihelj otkriva što priprema na Food Market by StoryGourmet: "Posljednjih godinu i pol dublje smo zašli u latino hranu, okuse, namirnice. Tako ćemo na Food Market SG doći s tom našom ponudom, doduše, s malo izmijenjenim izgledom, kombinacijom okusa u odnosu na ponudu u restoranu. Predstavit ću novo jelo, obraze od crne svinje u kokosu i zelenom čiliju. Mislim da će ljudima biti jako zanimljivo." </p>
+		  </div>
+	</section>
+
+    <!-- EL TORO Gallery -->
+    <div class="cases flex-grid section-padding" id="cases">
+      <div class="row2">
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="9">
+          		<a
+            	href="./_assets/images/eltoro1.jpg" class="gallBtn" data-size="1415x1271"
+            	data-title="El Toro"
+				data-lightbox="toro">
+            	<img src="./_assets/images/eltoro1.jpg" alt="El Toro"/></a>
+			</figure>
+			<figure class="gallItem photo-big" data-index="10">
+				<a
+			  	href="./_assets/images/eltoro2.jpg" class="gallBtn" data-size="1415x1271"
+			  	data-title="El Toro"
+				data-lightbox="toro">
+			  	<img src="./_assets/images/eltoro2.jpg" alt="El Toro"/></a>
+		  </figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="11">
+				<a
+			  	href="./_assets/images/eltoro3.jpg" class="gallBtn" data-size="1409x1271"
+			  	data-title="El Toro"
+				data-lightbox="toro">
+			  	<img src="./_assets/images/eltoro3.jpg" alt="El Toro"/></a>
+		  	</figure>
+		  	<figure class="gallItem photo-big" data-index="12">
+				<a
+		  		href="./_assets/images/eltoro4.jpg" class="gallBtn" data-size="1409x1271"
+		  		data-title="El Toro"
+				data-lightbox="toro">
+		  		<img src="./_assets/images/eltoro4.jpg" alt="El Toro"/></a>
+	  		</figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="13">
+				<a
+		  		href="./_assets/images/eltoro5.jpg" class="gallBtn" data-size="1409x1271"
+		  		data-title="El Toro"
+				data-lightbox="toro">
+		  		<img src="./_assets/images/eltoro5.jpg" alt="El Toro"/></a>
+	  		</figure>
+			<figure class="gallItem photo-big" data-index="14">
+				<a
+		  		href="./_assets/images/eltoro6.jpg" class="gallBtn" data-size="1409x1271"
+		  		data-title="El Toro"
+				data-lightbox="toro">
+		  		<img src="./_assets/images/eltoro6.jpg" alt="El Toro"/></a>
+	  		</figure>
+      	</div>
+	  	<div class="column">
+			<figure class="gallItem photo-big" data-index="15">
+				<a
+			  	href="./_assets/images/eltoro7.jpg" class="gallBtn" data-size="1415x1271"
+			  	data-title="El Toro"
+				data-lightbox="toro">
+			  	<img src="./_assets/images/eltoro7.jpg" alt="El Toro"/></a>
+		  	</figure>
+			<figure class="gallItem photo-big" data-index="16">
+				<a
+		  		href="./_assets/images/eltoro8.jpg" class="gallBtn" data-size="1415x1271"
+		  		data-title="El Toro"
+				data-lightbox="toro">
+		  		<img src="./_assets/images/eltoro8.jpg" alt="El Toro"/></a>
+	  		</figure>
+  		</div>
+      </div>
+	</div>
+
+   <!-- LARI & PENATI -->
+	<section class="flex-columns2 wrapper ">
+		<div class="row">
+		  <div class="column">
+			<div class="column-1">
+			  <img
+				class="lari"
+				src="./_assets/images/igor_tomljenovic.jpg"
+				alt="Igor Tomljenović"
+			  />
+			</div>
+		  </div>
+		  <div class="column">
+			<div class="column-2">
+				<div class="card">
+					<img class="tockice" src="./_assets/images/tockice_bez.png" alt="Aprikot točkice">
+					<div class="card-content">
+					  <div class="content has-text-centered">
+						Lari & Penati
+					  </div>
+					</div>
+				  </div>
+				  <a class="btn--apricot" href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Flaripenati%2F" class="btn--apricot" target="_blank">SAZNAJ VIŠE</a>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	<section class="wrapper">
+		<div >
+			<p class="opis_restorana opis_restorana--lari">Igor Tomljenović, vlasnik kultnog zagrebačkog bistroa čiji se koncept kuhinje temelji na miksu kuhinja Sjeverne Amerike, Europe, Mediterana, Bliskog istoka i Sjeverne Afrike, za Food Market by StoryGourmet priprema bestselere bistroa Lari & Penati:
+			„Poslužit ćemo zapečena pileća krilca marinirana u umaku od soje, đumbira, naranče, češnjaka i meda. Pripremit ćemo i naš sendvič Reuben koji se poslužuje i u poznatom njujorškom lokalu Katz’s.”</p>
+		</div>
+	</section>
+
+    <!-- LARI & PENATI Gallery -->
+    <div class="cases flex-grid section-padding" id="cases">
+      <div class="row2">
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="1">
+          		<a
+            	href="./_assets/images/lari1.jpg" class="gallBtn" data-size="1419x1274"
+            	data-title="Lari & Penati"
+				data-lightbox="lari">
+				
+            	<img src="./_assets/images/lari1.jpg" alt="Lari & Penati"/></a>
+			</figure>
+			<figure class="gallItem photo-big" data-index="2">
+				<a
+			  	href="./_assets/images/lari5.jpg" class="gallBtn" data-size="1419x1274"
+			  	data-title="Lari & Penati"
+				data-lightbox="lari">
+			  	<img src="./_assets/images/lari5.jpg" alt="Lari & Penati"/></a>
+		  </figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="3">
+				<a
+			  	href="./_assets/images/lari2.jpg" class="gallBtn" data-size="1413x1274"
+			  	data-title="Lari & Penati"
+				data-lightbox="lari">
+			  	<img src="./_assets/images/lari2.jpg" alt="Lari & Penati"/></a>
+		  	</figure>
+		  	<figure class="gallItem photo-big" data-index="4">
+				<a
+		  		href="./_assets/images/lari6.jpg" class="gallBtn" data-size="1413x1274"
+		  		data-title="Lari & Penati"
+				data-lightbox="lari">
+		  		<img src="./_assets/images/lari6.jpg" alt="Lari & Penati"/></a>
+	  		</figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="5">
+				<a
+		  		href="./_assets/images/lari3.jpg" class="gallBtn" data-size="1413x1274"
+		  		data-title="Lari & Penati"
+				data-lightbox="lari">
+		  		<img src="./_assets/images/lari3.jpg" alt="Lari & Penati"/></a>
+	  		</figure>
+			<figure class="gallItem photo-big" data-index="6">
+				<a
+		  		href="./_assets/images/lari7.jpg" class="gallBtn" data-size="1413x1274"
+		  		data-title="Lari & Penati"
+				data-lightbox="lari">
+		  		<img src="./_assets/images/lari7.jpg" alt="Lari & Penati"/></a>
+	  		</figure>
+      	</div>
+	  	<div class="column">
+			<figure class="gallItem photo-big" data-index="7">
+				<a
+			  	href="./_assets/images/lari4.jpg" class="gallBtn" data-size="1419x1274"
+			  	data-title="Lari & Penati"
+				data-lightbox="lari">
+			  	<img src="./_assets/images/lari4.jpg" alt="Lari & Penati"/></a>
+		  	</figure>
+			<figure class="gallItem photo-big" data-index="8">
+				<a
+		  		href="./_assets/images/lari8.jpg" class="gallBtn" data-size="1419x1274"
+		  		data-title="Lari & Penati"
+				data-lightbox="lari">
+		  		<img src="./_assets/images/lari8.jpg" alt="Lari & Penati"/></a>
+	  		</figure>
+  		</div>
+      </div>
+	</div>
+
+	<!-- Magnolia -->
+	<section class="wrapper flex-columns2">
+		<div class="row">
+		  <div class="column">
+			<div class="column-1">
+			  <img
+				class="magnolia"
+				src="./_assets/images/Magnolia.jpg"
+				alt="Magnolia"
+			  />
+			</div>
+		  </div>
+		  <div class="column">
+			<div class="column-2">
+				<div class="card">
+					<img class="tockice" src="./_assets/images/tockice_bez.png" alt="Aprikot točkice">
+					<div class="card-content">
+					  <div class="content has-text-centered">
+						Magnolia
+					  </div>
+					</div>
+				  </div>
+				  <a class="btn--apricot" href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fmagnoliaslastice%2F" class="btn--apricot" target="_blank">SAZNAJ VIŠE</a>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	<section class="wrapper">
+		<div>
+			<p class="opis_restorana opis_restorana--magnolia">Slastičarnica "Magnolia" godinama je sinonim za vrhunske kolače i torte te je slatki  dio Food Market by StoryGourmet  priče u zagrebačkoj Tvornici. "Magnolia" je započela na tradicionalnim delicijama, i po tome smo poznati. No priču smo proširili tako da te iste tradicionalne slastice predstavimo na jedan moderniji način. Zanimljiva je naša medovik torta zbog koje dolaze iz drugih gradova u Hrvatskoj. Zbog meringe navrate s drugog kraja grada; mono slastice poput kestena, stvarno su rapsodija za nepce... Tu je i kruška kolač, naši francuski kroasani, bučnica -  ističe kreativna vlasnica slastičarnice "Magnolia"  Jasmina Bagarić kojoj je mama Rosanda Jelinić savršen savjetnik, podrška i pomoć u poslu.</p>
+		  </div>
+	  </section>
+
+    <!-- Gallery -->
+    <div class="cases flex-grid section-padding" id="cases">
+      <div class="row2">
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="33">
+          		<a
+            	href="./_assets/images/magnolia1.jpg" class="gallBtn" data-size="1419x1274"
+            	data-title="Magnolia"
+				data-lightbox="Magnolia">
+            	<img src="./_assets/images/magnolia1.jpg" alt="Magnolia"/></a>
+			</figure>
+			<figure class="gallItem photo-big" data-index="34">
+				<a
+			  	href="./_assets/images/magnolia2.jpg" class="gallBtn" data-size="1419x1274"
+			  	data-title="Magnolia"
+				data-lightbox="Magnolia">
+			  	<img src="./_assets/images/magnolia2.jpg" alt="Magnolia"/></a>
+		  </figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="35">
+				<a
+			  	href="./_assets/images/magnolia3.jpg" class="gallBtn" data-size="1413x1274"
+			  	data-title="Magnolia"
+				data-lightbox="Magnolia">
+			  	<img src="./_assets/images/magnolia3.jpg" alt="Magnolia"/></a>
+		  	</figure>
+		  	<figure class="gallItem photo-big" data-index="36">
+				<a
+		  		href="./_assets/images/magnolia4.jpg" class="gallBtn" data-size="1413x1274"
+		  		data-title="Magnolia"
+				data-lightbox="Magnolia">
+		  		<img src="./_assets/images/magnolia4.jpg" alt="Magnolia"/></a>
+	  		</figure>
+        </div>
+        <div class="column">
+			<figure class="gallItem photo-big" data-index="37">
+				<a
+		  		href="./_assets/images/magnolia5.jpg" class="gallBtn" data-size="1413x1274"
+		  		data-title="Magnolia"
+				data-lightbox="Magnolia">
+		  		<img src="./_assets/images/magnolia5.jpg" alt="Magnolia"/></a>
+	  		</figure>
+			<figure class="gallItem photo-big" data-index="38">
+				<a
+		  		href="./_assets/images/magnolia6.jpg" class="gallBtn" data-size="1413x1274"
+		  		data-title="Magnolia"
+				data-lightbox="Magnolia">
+		  		<img src="./_assets/images/magnolia6.jpg" alt="Magnolia"/></a>
+	  		</figure>
+      	</div>
+	  	<div class="column">
+			<figure class="gallItem photo-big" data-index="39">
+				<a
+			  	href="./_assets/images/magnolia7.jpg" class="gallBtn" data-size="1419x1274"
+			  	data-title="Magnolia"
+				data-lightbox="Magnolia">
+			  	<img src="./_assets/images/magnolia7.jpg" alt="Magnolia"/></a>
+		  	</figure>
+			<figure class="gallItem photo-big" data-index="40">
+				<a
+		  		href="./_assets/images/magnolia8.jpg" class="gallBtn" data-size="1419x1274"
+		  		data-title="Magnolia"
+				data-lightbox="Magnolia">
+		  		<img src="./_assets/images/magnolia8.jpg" alt="Magnolia"/></a>
+	  		</figure>
+  		</div>
+    </div>
+
+	<!-- Ticker -->
+	<div class="ticker-wrap ticker-wrap--red">
+		<div class="ticker-inner">
+			<div class="ticker">
+				<div class="ticker__item">ULAZ SLOBODAN</div>
+				<div class="ticker__item">|</div>
+				<div class="ticker__item">MENTORSTVO CHEFOVA</div>
+				<div class="ticker__item">|</div>
+				<div class="ticker__item">POGLEDAJ RASPORED PO DANIMA</div>
+				<div class="ticker__item">|</div> 
+			</div>
+			<div class="ticker ticker--copy">
+				<div class="ticker__item">ULAZ SLOBODAN</div>
+				<div class="ticker__item">|</div>
+				<div class="ticker__item">MENTORSTVO CHEFOVA</div>
+				<div class="ticker__item">|</div>
+				<div class="ticker__item">POGLEDAJ RASPORED PO DANIMA</div>
+				<div class="ticker__item">|</div> 
+			</div>
+		</div>
+	</div>
+
+	<div class="last-card has-text-centered">
+		<div>
+			<h4><span>Ulaz slobodan</span></h4>
+			<h4>Food Market Gourmet</h4>
+			<h4>Od 7. do 10. travnja 2022.</h4>
+			<h4>Od 11 do 00:00</h4>
+		</div>
+	</div>
+
+	
+    <!-- FOOTER -->
+    <footer class="footer ">
+      <div class="container-footer">
+        <h4 class="footer__text has-text-centered">SADRŽAJ NASTAO U SURADNJI</h4>
+        <!-- <a href="http://www.adriamedia.hr" target="_blank"
+          ><img class="logo" src="./_assets/images/amz-logo.png" alt="AMZ Native Studio"
+        /></a> -->
+	<div class="footer__grid">
+		<img src="./_assets/images/FoodMarket_logo_footer.png" alt="Food Market logo">
+		<img src="./_assets/images/AMZ_logo_footer.png" alt="AMZ logo">
+		<img src="./_assets/images/barcaffe_logo_footer.png" alt="Barcaffe">
+		<img src="./_assets/images/Aspira_logo_footer.png" alt="Aspira logo">
+		<img src="./_assets/images/olIstria_logo_footer.png" alt="Ol Istria logo">
+		<img src="./_assets/images/Opege_logo_footer.png" alt="Opege logo">
+		<img src="./_assets/images/ledo_logo_footer.png" alt="Ledo logo">
+		<img src="./_assets/images/vina_belje_footer.png" alt="Vina Belje">
+		<img src="./_assets/images/Vina_Laguna_footer.png" alt="Vina Laguna">
+		<img src="./_assets/images/kenwood_logo_footer.png" alt="Kenwood logo">
+		<img src="./_assets/images/Braun_Logo_footer.png" alt="Braun logo">
+	</div>
+	  
+    </footer> 
+
+    <script
+  		src="https://code.jquery.com/jquery-3.6.0.min.js"
+  		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  		crossorigin="anonymous">
+	</script>
+	<script src="./_javascript/lightbox.min.js"></script>
+	<script type="text/javascript" src="lib/main.js"></script>
+  </body>
+</html>

@@ -11618,34 +11618,41 @@ a {
             transform: translateY(-8px) rotate(-45deg);
   }
 }
-#uvod {
+#uvod,
+#restorani {
   margin-top: 130px;
 }
 @media (max-width: 500px) {
-  #uvod {
+  #uvod,
+#restorani {
     margin-top: 55px;
     padding: 0;
   }
 }
 @media (min-width: 501px) and (max-width: 900px) {
-  #uvod {
+  #uvod,
+#restorani {
     margin-top: 73px;
   }
 }
 
-@media (min-width: 901) and (max-width: 1200) {
-  #ilustracija {
-    position: relative;
-    top: -72px;
-  }
-}
-
-#program {
+#program,
+#mentoriranje_index,
+#restorani__index {
   margin-bottom: 100px;
 }
 @media (max-width: 500px) {
-  #program {
+  #program,
+#mentoriranje_index,
+#restorani__index {
     margin-bottom: 0;
+  }
+}
+@media (min-width: 501px) and (max-width: 900px) {
+  #program,
+#mentoriranje_index,
+#restorani__index {
+    margin-bottom: 50px;
   }
 }
 
@@ -12774,7 +12781,7 @@ section {
 }
 
 .btn--green:hover {
-  color: #c6e3a0;
+  color: #707070;
   background-color: white;
   -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
@@ -12922,7 +12929,7 @@ section {
 }
 
 .btn--apricot:hover {
-  color: #c59d99;
+  color: #eab57e;
   background-color: white;
   -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
@@ -13230,7 +13237,7 @@ section {
 }
 
 .video {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 @media (max-width: 500px) {
   .video {
@@ -13473,7 +13480,7 @@ section {
 }
 @media (max-width: 500px) {
   #mentoriranje {
-    margin-top: 55px;
+    margin-top: 9px;
     padding: 0;
   }
 }
@@ -13515,6 +13522,12 @@ section {
           justify-content: center;
   min-height: 100vh;
   padding: 4rem 0;
+  margin-top: 50px;
+}
+@media (max-width: 500px) {
+  #raspored__body {
+    margin-top: 0;
+  }
 }
 
 .scheduleContainer {

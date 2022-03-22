@@ -142,7 +142,8 @@ a {
   }
 }
 
-#uvod {
+#uvod,
+#restorani {
   margin-top: 130px;
 
   @include for-phone {
@@ -155,18 +156,17 @@ a {
   }
 }
 
-#ilustracija {
-  @media (min-width: 901) and (max-width: 1200) {
-    position: relative;
-    top: -72px;
-  }
-}
-
-#program {
+#program,
+#mentoriranje_index,
+#restorani__index {
   margin-bottom: 100px;
 
   @include for-phone {
     margin-bottom: 0;
+  }
+
+  @include for-tablet-portrait {
+    margin-bottom: 50px;
   }
 }
 
@@ -1051,7 +1051,7 @@ section {
 }
 
 .btn--green:hover {
-  color: $light-green;
+  color: $gray-light;
   background-color: white;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
   border-color: $light-green;
@@ -1187,7 +1187,7 @@ section {
 }
 
 .btn--apricot:hover {
-  color: $pinkish;
+  color: $apricot;
   background-color: white;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
   border-color: $apricot;
@@ -1468,7 +1468,7 @@ section {
 }
 
 .video {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   @include for-phone {
     margin-bottom: 17px;
@@ -1698,7 +1698,7 @@ $duration: 20s;
   margin-top: 130px;
 
   @include for-phone {
-    margin-top: 55px;
+    margin-top: 9px;
     padding: 0;
   }
 
@@ -1737,6 +1737,11 @@ $blockLengths: 1, 2, 3, 4;
   justify-content: center;
   min-height: 100vh;
   padding: 4rem 0;
+  margin-top: 50px;
+
+  @include for-phone {
+    margin-top: 0;
+  }
 }
 
 .scheduleContainer {
