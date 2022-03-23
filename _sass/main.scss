@@ -1194,6 +1194,74 @@ section {
   cursor: pointer;
 }
 
+.btn--red {
+  background-color: $redish;
+  color: white;
+  font-family: $family-third;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  margin: auto;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
+  border-color: $apricot;
+
+  @include for-phone {
+    border-radius: 27px;
+    font-size: 10px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 18px;
+    width: auto;
+    position: relative;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $redish;
+  }
+
+  @include for-tablet-portrait {
+    border-radius: 27px;
+    font-size: 10px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 18px;
+    width: auto;
+    position: relative;
+    top: -21px;
+    left: 176px;
+    border: 1px solid $redish;
+  }
+
+  @include for-desktop {
+    line-height: 10px;
+    border-radius: 35px;
+    border: 3px solid $redish;
+    font-size: 16px;
+    padding: 22px 58px;
+    position: relative;
+    top: 89px;
+    left: 80px;
+  }
+
+  @include for-big-desktop {
+    line-height: 10px;
+    border-radius: 35px;
+    border: 3px solid $redish;
+    position: relative;
+    top: 89px;
+    left: 192px;
+    font-size: 16px;
+    padding: 22px 58px;
+  }
+}
+
+.btn--red:hover {
+  color: $redish;
+  background-color: white;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+  border-color: $redish;
+  cursor: pointer;
+}
+
 .btn--grey {
   background-color: $gray-light;
   color: #fff;
