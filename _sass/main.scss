@@ -1194,6 +1194,74 @@ section {
   cursor: pointer;
 }
 
+.btn--rock {
+  background-color: #ababab;
+  color: white;
+  font-family: $family-third;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  margin: auto;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
+  border-color: #ababab;
+
+  @include for-phone {
+    border-radius: 27px;
+    font-size: 10px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 18px;
+    width: auto;
+    position: relative;
+    top: -21px;
+    left: 176px;
+    border: 1px solid #ababab;
+  }
+
+  @include for-tablet-portrait {
+    border-radius: 27px;
+    font-size: 10px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 18px;
+    width: auto;
+    position: relative;
+    top: -21px;
+    left: 176px;
+    border: 1px solid #ababab;
+  }
+
+  @include for-desktop {
+    line-height: 10px;
+    border-radius: 35px;
+    border: 3px solid #ababab;
+    font-size: 16px;
+    padding: 22px 58px;
+    position: relative;
+    top: 89px;
+    left: 80px;
+  }
+
+  @include for-big-desktop {
+    line-height: 10px;
+    border-radius: 35px;
+    border: 3px solid #ababab;
+    position: relative;
+    top: 89px;
+    left: 192px;
+    font-size: 16px;
+    padding: 22px 58px;
+  }
+}
+
+.btn--rock:hover {
+  color: #ababab;
+  background-color: white;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+  border-color: #ababab;
+  cursor: pointer;
+}
+
 .btn--red {
   background-color: $redish;
   color: white;
@@ -1429,6 +1497,16 @@ section {
   &--magnolia {
     @include for-phone {
       margin-top: -14px;
+    }
+  }
+
+  &--rock {
+    @include for-phone {
+      margin-top: -71px;
+    }
+
+    @include for-big-desktop {
+      margin-top: 77px;
     }
   }
 
