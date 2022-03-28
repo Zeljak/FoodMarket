@@ -1204,6 +1204,7 @@ section {
   margin: auto;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.4);
   border-color: #ababab;
+  visibility: hidden;
 
   @include for-phone {
     border-radius: 27px;
